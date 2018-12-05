@@ -10,36 +10,30 @@ public class Exercicio211 {
         //exibir("" + idadeConvidado); //forma1
         //exibir(valueOf(idadeConvidado)); //forma2
 
-        int qtdConvidados = 5; //deixar como 20
-        int[] idades = new int[qtdConvidados]; //começa em 0
+        int qtdConvidados = 4; //deixar como 20
         String[] nomes = new String[qtdConvidados];
-
         //recebendo dados pro array
         for (int contador = 0; contador < qtdConvidados; contador++) {
             nomes[contador] = showInputDialog(
-                    "CONTROLE DE CONVIDADOS\n" +
+                    "CONTROLE DE APOSTADORES\n" +
                     "Digite o nome do " + 
                             (contador + 1) + "º convidado"
             );
             
-            idades[contador] = receberInt(
-                    "Agora...\n" +
-                    "Digite a idade do " + nomes[contador]
-            );
         }
 
         //exibir o resultado
-        String resposta = "LISTA FINAL DE CONVIDADOS\n";
+     //   String resposta = "LISTA FINAL DE CONVIDADOS\n";
         
-        for (int cont = 0; cont < idades.length; cont++) {
-            resposta += 
-                    "Nome: " + nomes[cont] +
-                    ", " + idades[cont] + " anos " +
-                    "   - Situação: " + 
-                    validaConvidado(idades[cont]) + "\n";            
-        }
+       // for (int cont = 0; cont < idades.length; cont++) {
+      //      resposta += 
+       //             "Nome: " + nomes[cont] +
+        //            ", " + idades[cont] + " anos " +
+         //           "   - Situação: " + 
+        //            validaConvidado(idades[cont]) + "\n";            
+       // }
         
-        exibir(resposta);
+     //   exibir(resposta);
     }
 
     public static int receberInt(String mensagemProUsuario) {
@@ -56,16 +50,6 @@ public class Exercicio211 {
         showMessageDialog(null, mensagemProUsuario);
     }
 
-    public static String validaConvidado(int idadeConvidado) {
-        String msg = "";
 
-        if (idadeConvidado >= 15 && idadeConvidado <= 17) {
-            msg = "Você pode entrar na festa";
-        } else {
-            msg = "Sai fora bicão!!!";
-        }
-
-        return msg;
-    }
 
 }
